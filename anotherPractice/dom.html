@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM|html</title>
+    <style>
+        article{
+            border:2px solid seagreen;
+            border-radius: 10px;
+            margin:20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <article id="first-article">
+            <h3>article-1</h3>
+            <p class="author">author-1</p>
+            <button onclick="clickHandler()">click me</button>
+            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptas, error nobis ipsa earum aliquid ullam quas deserunt blanditiis commodi eligendi at. Culpa quo numquam cupiditate doloribus aperiam ipsum esse?</p>
+        </article>
+        <article>
+            <h3>article-2</h3>
+            <p class="author">author-2</p>
+            <p class="description">Ratione, earum ad mollitia minima fugiat autem voluptate eveniet cupiditate enim fugit nulla debitis neque natus, magni animi dolore. Adipisci voluptas repellat culpa delectus non eos unde iste autem earum?</p>
+        </article>
+    </section>
+
+
+    <script>
+        var authors = document.querySelectorAll(".author");
+        for (i =0; i<authors.length; i++){
+            var element = authors[i];
+            element.style.backgroundColor = "lightblue";
+            element.style.color = "red";
+            element.innerHTML ="Lekhok-"+(i+1);
+        }
+
+       var newItem =  document.getElementsByClassName("first-article");
+        newPara = document.createElement("p");
+        newPara.innerHTML = "This paragraph is created by js"
+        newItem.appendChild(newPara);
+
+        function clickHandler() {
+            var element = document.getElementById("article-1");
+            element.style.display = "none";
+        }
+      
+
+
+    </script>
+</body>
+</html>

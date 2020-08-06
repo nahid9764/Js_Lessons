@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+</head>
+<body>
+    <h2>My Lists:</h2>
+    <ul id="parent">
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Ratione sunt similique reprehenderit.</li>
+        <li>Fugit sit quas velit!</li>
+        <li>Beatae aut cum ab.</li>
+        <li>Dicta consequuntur maxime commodi?</li>
+    </ul>
+
+    <button id= "addBtn">Add new Items</button>
+
+    <script>
+        // var item = document.getElementsByTagName("li");{
+        //     for (let i = 0; i < item.length; i++) {
+        //         const element = item[i];
+        //        element.addEventListener('click', function(event){
+        //            event.target.parentNode.removeChild(event.target);
+        //        })
+        //     }
+        // }
+
+        document.getElementById("addBtn").addEventListener('click',function(){
+            var mainParent = document.getElementById("parent");
+            var newItem = document.createElement("li");
+            newItem.innerText = "i m new item.";
+            mainParent.appendChild(newItem);
+        });
+
+        document.getElementById("parent").addEventListener('click',function(){
+            event.target.parentNode.removeChild(event.target);
+        });
+    </script>
+</body>
+</html>
