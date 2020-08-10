@@ -1,8 +1,9 @@
 class Student {
-    constructor(sName, sRoll, sId){
-       this.Name = sName;
-       this.Roll = sRoll;
-       this.Id = sId;
+    constructor(sName, sRoll, sId) {
+        this.SchoolName = "GMC" 
+        this.Name = sName;
+        this.Roll = sRoll;
+        this.Id = sId;
     }
 }
 const stn2 = new Student("Hossain", 45, 463453);
